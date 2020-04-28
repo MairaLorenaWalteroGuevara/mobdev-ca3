@@ -2,52 +2,9 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'tabs',
-    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
-  },
-  {
-    path: 'characteres',
-    loadChildren: () => import('./pages/characteres/characteres.module').then( m => m.CharacteresPageModule)
-  },
-  {
-    path: 'character-details',
-    loadChildren: () => import('./pages/character-details/character-details.module').then( m => m.CharacterDetailsPageModule)
-  },
-  {
-    path: 'characters',
-    loadChildren: () => import('./pages/characters/characters.module').then( m => m.CharactersPageModule)
-  },
-  {
-    path: 'deaths',
-    loadChildren: () => import('./pages/deaths/deaths.module').then( m => m.DeathsPageModule)
-  },
-  {
-    path: 'episode-details',
-    loadChildren: () => import('./pages/episode-details/episode-details.module').then( m => m.EpisodeDetailsPageModule)
-  },
-  {
-    path: 'episodes',
-    loadChildren: () => import('./pages/episodes/episodes.module').then( m => m.EpisodesPageModule)
-  },
-  {
-    path: 'quote-details',
-    loadChildren: () => import('./pages/quote-details/quote-details.module').then( m => m.QuoteDetailsPageModule)
-  },
-  {
-    path: 'quotes',
-    loadChildren: () => import('./pages/quotes/quotes.module').then( m => m.QuotesPageModule)
-  },
+  { path: '', loadChildren:() => import('./pages/tabs/tabs.module').then (m =>m.TabsPageModule)}
 ];
+// code to create the route to the tabs reference week 3 of mobile
 
 @NgModule({
   imports: [
